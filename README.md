@@ -10,7 +10,7 @@
 - has_many :posts
 - has_many :comments
 
-## postsテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |title|text|null: false|
@@ -35,7 +35,7 @@
 ## posts_tagsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|post_id|integer|null: false, foreign_key: true|
+|message_id|integer|null: false, foreign_key: true|
 |tag_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :post
