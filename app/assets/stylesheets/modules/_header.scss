@@ -1,0 +1,52 @@
+.top-header{
+  background-color: rgb(212, 135, 222);
+}
+
+.header-title{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.three-box{
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 0 ;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left{
+  border: 1px solid gray;
+  &__box{
+    &__search{
+      &__name{
+
+      }
+      &__send{
+
+      }
+    }
+  }
+}
+
+.center{
+  border: 1px solid gray;
+  &__box{
+    &__search{
+      &__name{
+
+      }
+      &__send{
+
+      }
+    }
+  }
+}
+
+.right{
+  background-color: greenyellow;
+}
+
+
