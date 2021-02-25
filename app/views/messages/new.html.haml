@@ -1,0 +1,24 @@
+.new-page
+  =form_with html:{class:'new-box'} do |f|
+    .new-box__title
+      %label タイトル
+      =f.text_field :hoge, class: "new-box__title__form",required: "required", placeholder:"４０文字まで"
+
+    .new-box__category
+      %label カテゴリー
+      =f.select :hoge, [],{include_blank:"選択してください"},{class: "new-box__category__form",required: "required"}
+
+    .new-box__image
+      %label 投稿画像
+      -# %p.new-box__image__info １枚のみアップロードできます
+      .new-box__image__file
+        .new-box__image__file__upload
+          %i.fas.fa-camera
+          %p.new-box__image__file__upload__info クリックしてファイルをアップロード
+
+    .new-box__content
+      %label 記事の本文
+      =f.text_area :text, class: "new-box__content__text",required: "required", rows:'15', maxlength: '1000'
+
+    .new-box__submit
+      = f.submit "投稿する",class:"new-box__submit__btn"

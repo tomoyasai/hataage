@@ -1,0 +1,73 @@
+.new-page{
+  height: 100%;
+  width: 100vw;
+  background-color: rgb(199, 203, 226);
+  margin: 0 auto;
+}
+
+.new-box{
+  height: 800px;
+  width: 90%;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.new-box__title{
+ font-size: 20px;
+ padding-bottom: 10px;
+  &__form{
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+
+
+.new-box__category{
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.new-box__category__form{
+  width: 100%;
+  font-size: 20px;
+}
+
+
+
+.new-box__image{
+  background-color: greenyellow;
+  padding-bottom: 10px;
+}    
+.new-box__image__file{
+
+}
+.new-box__image__file__upload{
+
+}
+.fas.fa-camera{
+
+}
+.new-box__image__file__upload__info{
+
+}
+
+
+
+
+.new-box__content{
+  font-size: 20px;
+}
+.new-box__content__text{
+  width: 100%;
+}
+
+
+
+
+.new-box__submit{
+
+}
+
+.new-box__submit__btn{
+
+}
