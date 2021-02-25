@@ -1,0 +1,18 @@
+.message{
+  height: 600px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 100px;
+  &__box{
+
+    width: 190px;
+    background-color: burlywood;
+    &__title{
+      font-size: 50px;
+    }
+    &__icon{
+
+    }
+
+  }
+} 
