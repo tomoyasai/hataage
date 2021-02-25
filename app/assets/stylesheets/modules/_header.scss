@@ -1,0 +1,65 @@
+.top-header{
+  background-color: rgb(2, 179, 134);
+}
+
+.header-title{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.three-box{
+  text-align: center;
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 0 ;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left{
+  border: 1px solid gray;
+  &__box{
+    &__search{
+      &__name{
+
+      }
+      &__send{
+
+      }
+    }
+  }
+}
+
+.center{
+  border: 1px solid gray;
+  &__box{
+    &__search{
+      &__name{
+
+      }
+      &__send{
+
+      }
+    }
+  }
+}
+
+.right{
+  width: 200px;
+  border: 1px solid grey;
+}
+
+.right-bottom__button__registration{
+  text-decoration: none;
+  border: 1px solid grey;
+  color: black;
+}
+
+.right-bottom__button__login{
+  text-decoration: none;
+  border: 1px solid grey;
+  color: black;
+}
+
