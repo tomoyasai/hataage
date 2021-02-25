@@ -1,32 +1,24 @@
-.new
-  =form_with html:{class:'new__main'} do |f|
-    .new__main__list
-      .new__main__list__item
-        %label タイトル
-        %span.new__main__list__item__mark 必須
-        =f.text_field :hoge, class: "new__main__list__item__form",required: "required", placeholder:"４０文字まで"
+.new-page
+  =form_with html:{class:'new-box'} do |f|
+    .new-box__title
+      %label タイトル
+      =f.text_field :hoge, class: "new-box__title__form",required: "required", placeholder:"４０文字まで"
 
+    .new-box__category
+      %label カテゴリー
+      =f.select :hoge, [],{include_blank:"選択してください"},{class: "new-box__category__form",required: "required"}
 
-    .new__main__detail
-      .new__main__detail__category
-        %label カテゴリー
-        %span.new__main__detail__category__mark 必須
-        =f.select :hoge, [],{include_blank:"選択してください"},{class: "new__main__detail__category__form",required: "required"}
-    .new__main__image
-      %label 出品画像
-      %span.new__main__image__mark 必須
-      %p.new__main__image__info １枚のみアップロードできます
-      .new__main__image__file
-        .new__main__image__file__upload
+    .new-box__image
+      %label 投稿画像
+      -# %p.new-box__image__info １枚のみアップロードできます
+      .new-box__image__file
+        .new-box__image__file__upload
           %i.fas.fa-camera
-          %p.new__main__image__file__upload__info クリックしてファイルをアップロード
-      .new__main__list__info
-        %label 記事の本文
-        %span.new__main__list__info__mark 必須
-        %p.new__main__list__info__count 0/1000
+          %p.new-box__image__file__upload__info クリックしてファイルをアップロード
 
+    .new-box__content
+      %label 記事の本文
+      =f.text_area :text, class: "new-box__content__text",required: "required", rows:'15', maxlength: '1000'
 
-
-    .new__main__submit
-      .new__main__submit__listing
-        = f.submit "投稿する",class:"new__main__submit__listing__btn"
+    .new-box__submit
+      = f.submit "投稿する",class:"new-box__submit__btn"
