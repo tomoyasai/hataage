@@ -16,7 +16,8 @@
 |title|text|null: false|
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|image|string||
+|image|string|
+|category_id|integer|null: false|
 
 ### Association
 - belongs_to :user
