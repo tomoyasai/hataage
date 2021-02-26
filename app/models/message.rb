@@ -8,5 +8,6 @@ class Message < ApplicationRecord
 
     extend ActiveHash::Associations::ActiveRecordExtensions
     belongs_to_active_hash :category
+    validates :category, presence: true
 
 end
