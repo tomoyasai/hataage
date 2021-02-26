@@ -14,7 +14,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |title|text|null: false|
-|text|text|null: false|
+|content|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |image|string|
 |category_id|integer|null: false|
