@@ -11,21 +11,23 @@
   
 .show-box{
   text-align: center;
+
 }
   
 .show-box__image{
   font-size: 20px;
+  padding-bottom: 50px;
 }
 
 .show-box__image__file{
   height: 100%;
   width: 60%;
   margin: 0 auto;
-  // width: 90%;
   border: black solid 1px;
 }
 
 .show-box__title{
+  padding-bottom: 50px;
   display: flex;
   justify-content: center;
 }
@@ -38,6 +40,7 @@
 }
 
 .show-box__category{
+  padding-bottom: 50px;
   display: flex;
   justify-content: center;
 }
@@ -47,4 +50,27 @@
   margin-left: 50px;
   font-size: 50px;
   font-weight: bold;
+}
+
+.show-box__content{
+  padding-bottom: 150px;
+}
+
+.show-box__content__data{
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.return__button{
+  height: 50px;
+  margin: 50px 600px;
+  background-color: orange;
+  border: 1px solid orange;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 48px;
+  display: block;
+  text-decoration: none;
 }
