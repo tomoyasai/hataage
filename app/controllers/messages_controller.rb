@@ -19,8 +19,9 @@ class MessagesController < ApplicationController
   def update
     @message = Message.find(params[:id])  
     if @message.update(message_params)
-      redirect_to message_path(@message)
+      redirect_to message_path(@message), notice: '投稿内容が編集されました'
     else
+      flash.now[:alert] = '必要項目を入力してください。'
       render :edit
     end
   end
