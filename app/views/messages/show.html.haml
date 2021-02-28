@@ -23,6 +23,11 @@
       .show-box__content__data
         = @message.content
 
+      - if user_signed_in? && current_user.id == @message.user.id
+        = link_to '商品を編集する', edit_message_path(@message.id), class:"show-box__content__edit"
+        -# = link_to '商品を削除する', item_path(@item), method: :delete, class:"show__main__top__btn3"
+      - else
+
     = link_to 'トップページに戻る', root_path, class: 'return__button'
 
 = render "button" 

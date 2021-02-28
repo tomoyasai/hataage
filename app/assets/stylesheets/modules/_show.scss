@@ -53,12 +53,26 @@
 }
 
 .show-box__content{
-  padding-bottom: 150px;
 }
 
 .show-box__content__data{
   font-size: 50px;
   font-weight: bold;
+}
+
+
+.show-box__content__edit{
+  height: 50px;
+  margin: 50px 500px;
+  background-color: green;
+  border: 1px solid green;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 48px;
+  display: block;
+  text-decoration: none;
 }
 
 .return__button{
