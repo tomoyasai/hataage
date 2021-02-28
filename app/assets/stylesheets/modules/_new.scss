@@ -51,9 +51,6 @@
 
 }
 
-
-
-
 .new-box__content{
   font-size: 20px;
 }
@@ -61,13 +58,24 @@
   width: 100%;
 }
 
-
-
-
 .new-box__submit{
-
+  text-align: center;
 }
 
 .new-box__submit__btn{
+  font-size: 20px;
+  width: 20%;
+  color: white;
+  background-color: orange;
+  cursor: pointer;
+}
 
+.new-box__return{
+  padding-top: 50px;
+  text-align: center;
+}
+
+.new-box__return__btn{
+  color: rgb(0, 225, 255);
+  text-decoration: none;
 }
