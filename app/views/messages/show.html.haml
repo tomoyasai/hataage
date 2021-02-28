@@ -1,10 +1,10 @@
 .show
   .show-title
-    %label 投稿詳細ページ
+    %label 【投稿詳細ページ】
 
   .show-box
     .show-box__image
-      %label 投稿画像
+      %label 【投稿画像】
       .show-box__image__file
         =image_tag @message.image.url
 
@@ -22,6 +22,10 @@
       %label 【記事の本文】
       .show-box__content__data
         = @message.content
+
+      - if user_signed_in? && current_user.id == @message.user.id
+        = link_to '商品を編集する', edit_message_path(@message.id), class:"show-box__content__edit"
+      - else
 
     = link_to 'トップページに戻る', root_path, class: 'return__button'
 
