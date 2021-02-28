@@ -35,6 +35,10 @@ class MessagesController < ApplicationController
     end
   end
 
+  def search
+  end
+  
+
   def create
     @message = Message.new(message_params)
     if @message.valid?
