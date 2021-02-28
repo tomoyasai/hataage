@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  # before_action :find_message, only: [:show, :edit, :update, :check_user]
+  before_action :find_message, only: [:show, :edit, :update, :check_user]
   before_action :check_user, only: [:edit, :update]
 
   def index
@@ -11,15 +11,12 @@ class MessagesController < ApplicationController
   end
 
   def show
-    @message = Message.find(params[:id])  
   end
 
-  def edit
-    @message = Message.find(params[:id])  
+  def edit 
   end
 
   def update
-    @message = Message.find(params[:id])  
     if @message.update(message_params)
       redirect_to message_path(@message), notice: '投稿内容が編集されました'
     else
@@ -50,7 +47,6 @@ class MessagesController < ApplicationController
   end
 
   def check_user
-    @message = Message.find(params[:id])  
     if @message.user_id != current_user.id
       redirect_to action: :index
     end
