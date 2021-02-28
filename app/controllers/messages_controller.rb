@@ -12,6 +12,10 @@ class MessagesController < ApplicationController
     @message = Message.find(params[:id])  
   end
 
+  def edit
+    @message = Message.find(params[:id])  
+  end
+
   def create
     @message = Message.new(message_params)
     if @message.valid?
@@ -22,6 +26,7 @@ class MessagesController < ApplicationController
       render "new"
     end
   end
+
 
   private
   def message_params

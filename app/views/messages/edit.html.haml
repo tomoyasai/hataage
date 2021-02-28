@@ -1,0 +1,28 @@
+.new-page
+  =form_with model: [@message], html: {class: "new-box"}, local: true do |f|
+    .new-box__title
+      %label タイトル
+      =f.text_field :title, class: "new-box__title__form", placeholder:"４０文字まで"
+
+    .new-box__category
+      %label カテゴリー
+      = f.collection_select :category_id, Category.all, :id, :name,{include_blank:"選択してください"},{class: "new-box__category__form"}
+
+    .new-box__image
+      %label 投稿画像
+      %p.new-box__image__info １枚のみアップロードできます
+      .new-box__image__file
+        = f.label :image, class: 'new-box__image__file__upload' do
+          = icon('fas', 'camera', class: 'new-box__image__file__upload__icon')
+          = f.file_field :image, class: 'new-box__image__file__upload__file'
+          %p.new-box__image__file__upload__info クリックしてファイルをアップロード
+
+    .new-box__content
+      %label 記事の本文
+      =f.text_area :content, class: "new-box__content__text", rows:'15', maxlength: '1000'
+
+    .new-box__submit
+      = f.submit "編集する",class:"new-box__submit__btn"
+      
+    .new-box__return
+      = link_to 'もどる', root_path, class: "new-box__return__btn"
