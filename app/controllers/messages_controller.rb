@@ -1,4 +1,6 @@
 class MessagesController < ApplicationController
+  # before_action :find_message, only: [:show, :edit, :update, :check_user]
+  before_action :check_user, only: [:edit, :update]
 
   def index
     @messages = Message.all
@@ -41,6 +43,17 @@ class MessagesController < ApplicationController
   private
   def message_params
     params.require(:message).permit(:title, :content, :image,:category_id).merge(user_id: current_user.id)
+  end
+
+  def find_message
+    @message = Message.find(params[:id])  
+  end
+
+  def check_user
+    @message = Message.find(params[:id])  
+    if @message.user_id != current_user.id
+      redirect_to action: :index
+    end
   end
 
 end
