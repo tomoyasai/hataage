@@ -20,7 +20,7 @@ class MessagesController < ApplicationController
     if @message.update(message_params)
       redirect_to message_path(@message), notice: '投稿内容が編集されました'
     else
-      flash.now[:alert] = '必要項目を入力してください。'
+      flash.now[:alert] = '必要項目を入力してください'
       render :edit
     end
   end
@@ -31,7 +31,7 @@ class MessagesController < ApplicationController
       @message.save
       redirect_to root_path, notice: 'メッセージが送信されました'
     else
-      flash.now[:alert] = '必要項目を入力してください。'
+      flash.now[:alert] = '必要項目を入力してください'
       render "new"
     end
   end
