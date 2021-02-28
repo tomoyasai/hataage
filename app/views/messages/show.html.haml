@@ -1,0 +1,28 @@
+.show
+  .show-title
+    %label 投稿詳細ページ
+
+  .show-box
+    .show-box__image
+      %label 投稿画像
+      .show-box__image__file
+        =image_tag @message.image.url
+
+    .show-box__title
+      %label 【タイトル】
+      .show-box__title__data
+        = @message.title
+
+    .show-box__category
+      %label 【カテゴリー】
+      .show-box__category__data
+        = @message.category.name
+
+    .show-box__content
+      %label 【記事の本文】
+      .show-box__content__data
+        = @message.content
+
+    = link_to 'トップページに戻る', root_path, class: 'return__button'
+
+= render "button" 

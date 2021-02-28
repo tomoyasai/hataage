@@ -1,6 +1,6 @@
-%ul.message
+.message
   - @messages.each do |message|
-    %li.message__box
+    = link_to message_path(message), class: 'message__box' do
       .message__box__title 
         =message.title
       .message__box__icon アイコン
