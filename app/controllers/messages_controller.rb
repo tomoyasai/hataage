@@ -36,6 +36,7 @@ class MessagesController < ApplicationController
   end
 
   def search
+    @messages = Message.search(params[:keyword])
   end
   
 
