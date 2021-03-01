@@ -1,20 +1,21 @@
-%h2.result 検索結果ページ
+%h2.result-title 
+  【検索結果】
 
-.show
+.result
   - @messages.each do |message|
-    .show-box
+    .result-box
       = link_to message_path(message), class: 'link-box' do
-        .show-box__image
+        .result-box__image
           %label 【投稿画像】
-          .show-box__image__file
-          = image_tag message.image.url, class: 'show-box__image__picture'
+          .result-box__image__file
+          = image_tag message.image.url, class: 'result-box__image__picture'
 
-        .show-box__title
+        .result-box__title
           %label 【タイトル】
-          .show-box__title__data
+          .result-box__title__data
             =message.title
 
-        .show-box__category
+        .result-box__category
           %label 【カテゴリー】
-          .show-box__category__data
+          .result-box__category__data
             =message.category.name
