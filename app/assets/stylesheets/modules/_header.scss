@@ -20,27 +20,29 @@
 
 .left{
   border: 1px solid gray;
-  &__box{
-    &__search{
-      &__name{
+}
 
-      }
-      &__send{
+.left__box{
+}
 
-      }
+.left__box__search{
+  &__form{
+    &__word{
+      width: 300px;
+    }
+    &__send{
     }
   }
 }
+
 
 .center{
   border: 1px solid gray;
   &__box{
     &__search{
       &__name{
-
       }
       &__send{
-
       }
     }
   }
