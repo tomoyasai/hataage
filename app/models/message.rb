@@ -12,4 +12,12 @@ class Message < ApplicationRecord
     extend ActiveHash::Associations::ActiveRecordExtensions
     belongs_to_active_hash :category
 
+  def self.search(search)
+    if search != ""
+      Message.where('title LIKE(?)', "%#{search}%")
+    else
+      Message.all
+    end
+  end
+
 end

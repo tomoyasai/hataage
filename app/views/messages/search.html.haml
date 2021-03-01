@@ -1,15 +1,24 @@
-%h2.result 検索結果ページ
+= render "header" 
+= render "button" 
 
-.show
-  .show-box
-    .show-box__image
-      %label 【投稿画像】
-      .show-box__image__file
+%h2.result-title 
+  【検索結果】
 
-    .show-box__title
-      %label 【タイトル】
-      .show-box__title__data
+.result
+  - @messages.each do |message|
+    .result-box
+      = link_to message_path(message), class: 'link-box' do
+        .result-box__image
+          %label 【投稿画像】
+          .result-box__image__file
+          = image_tag message.image.url, class: 'result-box__image__picture'
 
-    .show-box__category
-      %label 【カテゴリー】
-      .show-box__category__data
+        .result-box__title
+          %label 【タイトル】
+          .result-box__title__data
+            =message.title
+
+        .result-box__category
+          %label 【カテゴリー】
+          .result-box__category__data
+            =message.category.name

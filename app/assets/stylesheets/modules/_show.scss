@@ -19,11 +19,14 @@
 }
 
 .show-box__image__file{
-  height: 100%;
-  width: 60%;
   margin: 0 auto;
-  border: black solid 1px;
 }
+
+.show-box__image__picture{
+  width: 200px;
+  height: 200px;
+}
+
 
 .show-box__title{
   padding-bottom: 50px;

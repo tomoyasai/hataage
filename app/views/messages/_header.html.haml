@@ -1,14 +1,16 @@
 .top-header
-  .header-title
-    hataage
+  .header-box
+    = link_to 'hataage', root_path, class: 'header-title'
+  
 
 .three-box
   .left
     .left__box 
       .left__box__search
-        = text_field :keyword,class: 'left__box__search__name'
-        .left__box__search__name 
-          キーワード検索
+        =form_with url: search_messages_path, method: :get, class: 'left__box__search__form' ,local: true do |f|
+          = f.text_field :keyword,class: 'left__box__search__form__word',placeholder: 'キーワードから探す'
+          .left__box__search__form__send
+            = f.submit '検索'
 
   .center
     .center__box  
