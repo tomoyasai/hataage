@@ -2,10 +2,14 @@
   background-color: rgb(2, 179, 134);
 }
 
-.header-title{
+.header-box{
   text-align: center;
+}
+.header-title{
   font-size: 50px;
   font-weight: bold;
+  text-decoration: none;
+  color: white;
 }
 
 .three-box{
@@ -13,24 +17,28 @@
   max-width: 1040px;
   width: 100%;
   margin: 0 auto;
-  padding: 15px 0 ;
+  padding: 15px 0;
   display: flex;
   justify-content: space-between;
 }
 
 .left{
   border: 1px solid gray;
+
 }
 
 .left__box{
+
 }
 
 .left__box__search{
   &__form{
+
     &__word{
-      width: 300px;
+      width: 200px;
     }
     &__send{
+      
     }
   }
 }
