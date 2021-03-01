@@ -6,7 +6,7 @@
     .show-box__image
       %label 【投稿画像】
       .show-box__image__file
-        =image_tag @message.image.url
+      =image_tag @message.image.url, class: 'show-box__image__picture'
 
     .show-box__title
       %label 【タイトル】
