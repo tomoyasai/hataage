@@ -11,6 +11,10 @@ class Message < ApplicationRecord
       validates :image
     end
 
+    def liked_by?(user)
+      likes.where(user_id: user.id).exists?
+    end
+
     extend ActiveHash::Associations::ActiveRecordExtensions
     belongs_to_active_hash :category
 
@@ -22,8 +26,6 @@ class Message < ApplicationRecord
     end
   end
 
-  def liked_by?(user)
-    likes.where(user_id: user.id).exists?
-  end
+
 
 end
