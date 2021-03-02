@@ -28,6 +28,11 @@
         = link_to '商品を削除する', message_path(@message), method: :delete, class:"show-box__content__delete"
       - else
 
+      .item-button-container
+        .item-button-container__left
+          = render partial: 'likes/like', locals: { message: @message}
+
+
     = link_to 'トップページに戻る', root_path, class: 'return__button'
 
 = render "button" 
