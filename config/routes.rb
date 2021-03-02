@@ -7,6 +7,10 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
+
+    post 'add' => 'likes#create'
+    delete '/add' => 'likes#destroy'
+    
   end
 
   resources :messages, only: [:index, :new, :create, :show, :edit, :update, :destroy]
