@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_many :messages
   has_many :comments
+  has_many :likes, dependent: :destroy
+  has_many :like_messages, through: :likes, source: :message
   
   validates :name, presence: true, uniqueness: true
 
