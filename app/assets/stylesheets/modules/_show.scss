@@ -10,6 +10,7 @@
   
 .show-box{
   text-align: center;
+  margin: 100px;
 
 }
   
@@ -31,34 +32,35 @@
 .show-box__title{
   padding-bottom: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: right;
 }
 
 
 .show-box__title__data{
   margin-left: 50px;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
 }
 
 .show-box__category{
   padding-bottom: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: right;
 }
 
 
 .show-box__category__data{
   margin-left: 50px;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
 }
 
 .show-box__content{
+
 }
 
 .show-box__content__data{
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
 }
 
