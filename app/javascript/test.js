@@ -1,14 +1,38 @@
+const { handleMethod } = require("@rails/ujs");
+
 $(function(){
-  $('.like').on('click', function(e){
-    alert($("#string").text());
-  });
+  $('.item-button-container').on('click','.like', function(e){
+    // debugger
+    var str = $(".item-button-container span").text();
+    if (method = post) {
+      str = (+str + 1);
+      });
+    } else {
+      str = (-str + 1);
+    }
+    
+    $(".item-button-container span").text(str);
+
+    });
 });
 
+// $("button").click(function(){
+// 	var str = $("p").text();
+// 	alert(str);
+// })
 
-// $("#button").on("click", function(){
-//   alert($("#string").text());
-// });
+// $(".item-button-container span").text(str);
+//   str = (str + 1)
 
-$("#button").on("click", function(){
-  $("#parent").text("変更後の文章");
-});
+// .done(function(users) {
+//   $("#UserSearchResult").empty();
+//   if (users.length !== 0) {
+//     users.forEach(function(user) {
+//       addUser(user);
+//     });
+//   } else if (input.length == 0) {
+//     return false;
+//   } else {
+//     addNoUser();
+//   }
+// })
