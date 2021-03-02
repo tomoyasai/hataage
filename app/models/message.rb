@@ -1,6 +1,8 @@
 class Message < ApplicationRecord
     belongs_to :user
     has_many :comments
+    has_many :likes
+    has_many :users, through: :likes
     mount_uploader :image, ImageUploader
     with_options presence: true do
       validates :title
@@ -18,6 +20,10 @@ class Message < ApplicationRecord
     else
       Message.all
     end
+  end
+
+  def liked_by?(user)
+    likes.where(user_id: user.id).exists?
   end
 
 end
