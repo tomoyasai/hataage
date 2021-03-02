@@ -31,6 +31,8 @@
       .item-button-container
         .item-button-container__left
           = render partial: 'likes/like', locals: { message: @message}
+          %span
+            =@message.likes.length
 
 
     = link_to 'トップページに戻る', root_path, class: 'return__button'
