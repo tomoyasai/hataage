@@ -1,6 +1,6 @@
 - if message.liked_by?(current_user)
-  = link_to message_add_path(message), method: :delete, remote: true, class: "like",id: :"like-button-#{message.id}" do
+  = link_to message_add_path(message), method: :delete, remote: true, class: "like liked",id: :"like-button-#{message.id}" do
     = icon('fas', 'fa-lg fas fa-heart icon-btn liked')
 - else 
-  = link_to message_add_path(message), method: :post, remote: true, class: "like", id: :"like-button-#{message.id}" do
+  = link_to message_add_path(message), method: :post, remote: true, class: "like unlike", id: :"like-button-#{message.id}" do
     = icon('fas', 'fa-lg fas fa-star icon-btn not-like')
