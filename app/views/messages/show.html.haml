@@ -4,7 +4,7 @@
 
   .show-box
     .show-box__image
-      %label 【投稿画像】
+      -# %label 【投稿画像】
       .show-box__image__file
       =image_tag @message.image.url, class: 'show-box__image__picture'
 
@@ -19,12 +19,13 @@
         = @message.category.name
 
     .show-box__memo
-      %label 【記事の本文】
+      -# %label 【記事の本文】
       .show-box__memo__data
         = @message.content
 
     .item-button-container
       .item-button-container__left
+        %p 良いっすね！
         = render partial: 'likes/like', locals: { message: @message}
         %span
           =@message.likes.length

@@ -9,8 +9,7 @@
 }
   
 .show-box{
-  text-align: center;
-  margin: 100px;
+  margin: 0 400px;
 
 }
   
@@ -21,12 +20,11 @@
 }
 
 .show-box__image__file{
-  margin: 0 100px ;
 }
 
 .show-box__image__picture{
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 400px;
 }
 
 .show-box__title{
@@ -55,7 +53,6 @@
 }
 
 .show-box__memo{
-
 }
 .show-box__memo__data{
   padding: 20px 0;
@@ -64,7 +61,11 @@
 }
 
 .show-box__content{
-  
+}
+
+
+.item-button-container{
+  text-align: center;
 }
 
 .show-box__content__edit{
