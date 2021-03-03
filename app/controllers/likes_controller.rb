@@ -16,6 +16,6 @@ class LikesController < ApplicationController
 
   private
   def set_like
-      @message =Message.find(params[:message_id])
+    @message =Message.find(params[:message_id])
   end
 end
