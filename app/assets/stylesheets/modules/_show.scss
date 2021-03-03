@@ -15,12 +15,13 @@
 }
   
 .show-box__image{
+  display: flex;
   font-size: 20px;
   padding-bottom: 50px;
 }
 
 .show-box__image__file{
-  margin: 0 auto;
+  margin: 0 100px ;
 }
 
 .show-box__image__picture{
@@ -28,13 +29,11 @@
   height: 200px;
 }
 
-
 .show-box__title{
   padding-bottom: 50px;
   display: flex;
   justify-content: right;
 }
-
 
 .show-box__title__data{
   margin-left: 50px;
@@ -55,19 +54,23 @@
   font-weight: bold;
 }
 
-.show-box__content{
+.show-box__memo{
 
 }
-
-.show-box__content__data{
+.show-box__memo__data{
+  padding: 20px 0;
   font-size: 30px;
   font-weight: bold;
 }
 
+.show-box__content{
+  
+}
 
 .show-box__content__edit{
   height: 50px;
-  margin: 50px 400px;
+  margin: 30px auto;
+  width: 40%;
   background-color: green;
   border: 1px solid green;
   color: white;
@@ -81,7 +84,8 @@
 
 .show-box__content__delete{
   height: 50px;
-  margin: 50px 450px;
+  width: 40%;
+  margin: 30px auto;
   background-color: pink;
   border: 1px solid pink;
   color: white;
@@ -95,7 +99,8 @@
 
 .return__button{
   height: 50px;
-  margin: 50px 500px;
+  width: 40%;
+  margin: 30px auto;
   background-color: orange;
   border: 1px solid orange;
   color: white;
