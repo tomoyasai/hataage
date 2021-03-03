@@ -1,8 +1,8 @@
 .new-page{
   height: 100%;
   width: 100vw;
-  background-color: rgb(199, 203, 226);
-  margin: 0 auto;
+  background-color: rgb(2, 179, 134);
+  padding: 20px;
 }
 
 .new-box{
@@ -10,6 +10,7 @@
   width: 90%;
   background-color: white;
   margin: 0 auto;
+  padding: 10px;
 }
 
 .new-box__title{
@@ -35,8 +36,9 @@
 
 
 .new-box__image{
-  background-color: greenyellow;
+  // background-color: greenyellow;
   padding-bottom: 10px;
+  border: 1px;
 }    
 .new-box__image__file{
 
