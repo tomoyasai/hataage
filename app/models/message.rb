@@ -1,7 +1,7 @@
 class Message < ApplicationRecord
     belongs_to :user
     has_many :comments
-    has_many :likes
+    has_many :likes, dependent: :destroy
     has_many :users, through: :likes
     mount_uploader :image, ImageUploader
     with_options presence: true do
