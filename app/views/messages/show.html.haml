@@ -35,6 +35,12 @@
         = link_to '投稿を削除する', message_path(@message), method: :delete, class:"show-box__content__delete"
       - else
 
+
+    .container
+      = form_with model: [@message, @comment], local: true do |f|
+        = f.text_area :text, placeholder: "コメントする", rows: "2" 
+        = f.submit "SEND"
+
     = link_to 'トップページに戻る', root_path, class: 'return__button'
 
 = render "button"
