@@ -50,8 +50,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |comment|text|null: false|
-|user_id|integer|null: false|
-|message_id|integer|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|message_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :message
 - belongs_to :user
