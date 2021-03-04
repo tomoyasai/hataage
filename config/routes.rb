@@ -3,13 +3,14 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root "messages#index"
 
-  resources :messages, only: [:index, :new, :create, :show] do 
+  resources :messages do
     collection do
       get 'search'
     end
-  end
 
-  resources :messages, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+    post 'add' => 'likes#create'
+    delete '/add' => 'likes#destroy'
+  end
 
   resources :users, only: [:edit, :update]
 end

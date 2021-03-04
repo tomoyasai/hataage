@@ -3,4 +3,5 @@
     = link_to message_path(message), class: 'message__box' do
       .message__box__title 
         =message.title
-        %p.message__box__icon アイコン
+        %p.message__box__icon
+          = message.user.name
