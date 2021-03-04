@@ -23,8 +23,8 @@
       .show-box__memo__data
         = @message.content
 
-    .item-button-container
-      .item-button-container__left
+    .show__good
+      .show__good__box
         %p いいね！
         = render partial: 'likes/like', locals: { message: @message,count: @count}
        
