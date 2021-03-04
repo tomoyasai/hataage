@@ -8,11 +8,11 @@ Rails.application.routes.draw do
       get 'search'
     end
 
+    resources :comments, only: :create
+
     post 'add' => 'likes#create'
     delete '/add' => 'likes#destroy'
   end
 
   resources :users, only: [:edit, :update]
-
-  resources :comments, only: :create
 end
