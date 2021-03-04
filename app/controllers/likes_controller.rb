@@ -6,12 +6,14 @@ class LikesController < ApplicationController
       user = current_user
       message = Message.find(params[:message_id])
       like = Like.create(user_id: user.id, message_id: message.id)
+      @count=message.likes.length
   end
   def destroy
       user = current_user
       message = Message.find(params[:message_id])
       like = Like.find_by(user_id: user.id, message_id: message.id)
       like.delete
+      @count=message.likes.length
   end
 
   private
