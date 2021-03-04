@@ -63,6 +63,39 @@
 .show-box__content{
 }
 
+.show__good{
+  text-align: center;
+}
+
+.show__good__box{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.not-like{
+  font-size: 2em;
+  color: skyblue;
+}
+
+.not-like-number{
+  font-size: 30px;
+  text-decoration: none;
+  color: skyblue;
+}
+
+.like{
+  text-decoration: none;
+}
+
+.liked{
+  font-size: 2em;
+  color: red;
+}
+
+.liked-number{
+  font-size: 30px;
+  color: red;
+}
 
 .item-button-container{
   text-align: center;
