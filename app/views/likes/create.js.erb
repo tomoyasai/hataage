@@ -1,1 +1,1 @@
-$("#like-button-<%= @message.id %>").html("<%= escape_javascript(render partial: "likes/like", locals: { message: @message }) %>");
+$("#like-button-<%= @message.id %>").html("<%= escape_javascript(render partial: "likes/like", locals: { message: @message ,count:@count}) %>");
