@@ -37,10 +37,28 @@
 
 
     .container
-      = form_with model: [@message, @comment], local: true do |f|
-        = f.text_area :text, placeholder: "コメントする", rows: "2" 
-        = f.submit "SEND"
+      = form_with model: [@message, @comment], html: {class: "Form"}, local: true do |f|
+        .Form__contents
+          = f.text_field :text, placeholder: "コメントする", rows: "2"
+          = f.submit "SEND"
+
+    .comments
+      .comments-box
+        - @comments.each do |comment|
+          = comment.user.nickname
+          = comment.text 
+          -# = link_to comment.user.nickname,id: :"/users/#{comment.user_id}" do
+          -#   = comment.text 
 
     = link_to 'トップページに戻る', root_path, class: 'return__button'
 
 = render "button"
+
+-# .message
+-#   - @messages.each do |message|
+    -# = link_to message_path(message), class: 'message__box' do
+-#       .message__box__title 
+-#         =message.title
+-#         %p.message__box__icon
+-#           = message.user.name
+  -# = link_to message_add_path(message), method: :delete, remote: true, class: "like",id: :"like-button-#{message.id}" do
