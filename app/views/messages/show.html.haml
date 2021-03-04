@@ -26,18 +26,14 @@
     .item-button-container
       .item-button-container__left
         %p いいね！
-        = render partial: 'likes/like', locals: { message: @message}
-        %span
-          =@message.likes.length
+        = render partial: 'likes/like', locals: { message: @message,count: @count}
+       
 
     .show-box__content
       - if user_signed_in? && current_user.id == @message.user.id
         = link_to '投稿を編集する', edit_message_path(@message.id), class:"show-box__content__edit"
         = link_to '投稿を削除する', message_path(@message), method: :delete, class:"show-box__content__delete"
       - else
-
-
-
 
     = link_to 'トップページに戻る', root_path, class: 'return__button'
 
