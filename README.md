@@ -9,6 +9,8 @@
 ### Association
 - has_many :messages
 - has_many :comments
+- has_many :likes, dependent: :destroy
+- has_many :like_messages, through: :likes, source: :message
 
 ## messagesテーブル
 |Column|Type|Options|
@@ -24,6 +26,8 @@
 - has_many :comments
 - has_many :messages_tags
 - has_many  :tags,  through:  :messages_tags
+- has_many :likes, dependent: :destroy
+- has_many :users, through: :likes
 
 ## tagsテーブル
 |Column|Type|Options|
@@ -46,6 +50,15 @@
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :message
+- belongs_to :user
+
+## likesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|message_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :message
