@@ -49,8 +49,9 @@
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|comment|text|null: false|
+|user_id|integer|null: false|
+|message_id|integer|null: false|
 ### Association
 - belongs_to :message
 - belongs_to :user
