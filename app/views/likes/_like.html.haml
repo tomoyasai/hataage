@@ -1,10 +1,10 @@
 - if message.liked_by?(current_user)
   = link_to message_add_path(message), method: :delete, remote: true, class: "like",id: :"like-button-#{message.id}" do
-    = icon('fas', 'fa-lg fas fa-heart icon-btn liked')
-    %span
+    = icon('fas', 'fa-lg fa-heart icon-btn liked')
+    %span.liked-number
       =count
 - else 
   = link_to message_add_path(message), method: :post, remote: true, class: "like", id: :"like-button-#{message.id}" do
     = icon('fas', 'fa-lg fas fa-star icon-btn not-like')
-    %span
+    %span.not-like-number
       =count
