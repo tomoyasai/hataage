@@ -11,6 +11,7 @@ class MessagesController < ApplicationController
   end
 
   def show
+    @count=@message.likes.length
   end
 
   def edit 
