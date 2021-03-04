@@ -12,6 +12,8 @@ class MessagesController < ApplicationController
 
   def show
     @count=@message.likes.length
+    @comment = Comment.new
+    @comments = @message.comments.includes(:user)
   end
 
   def edit 
