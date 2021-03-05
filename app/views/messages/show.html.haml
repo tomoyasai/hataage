@@ -4,7 +4,6 @@
 
   .show-box
     .show-box__image
-      -# %label 【投稿画像】
       .show-box__image__file
       =image_tag @message.image.url, class: 'show-box__image__picture'
 
@@ -19,7 +18,6 @@
         = @message.category.name
 
     .show-box__memo
-      -# %label 【記事の本文】
       .show-box__memo__data
         = @message.content
 
@@ -39,26 +37,18 @@
     .container
       = form_with model: [@message, @comment], html: {class: "Form"}, local: true do |f|
         .Form__contents
-          = f.text_field :text, placeholder: "コメントする", rows: "2"
-          = f.submit "SEND"
+          = f.text_field :text, placeholder: "コメントする", rows: "2", class:'text-box'
+          = f.submit "SEND", class:'send-box'
 
-    .comments
-      .comments-box
-        - @comments.each do |comment|
-          = comment.user.nickname
-          = comment.text 
-          -# = link_to comment.user.nickname,id: :"/users/#{comment.user_id}" do
-          -#   = comment.text 
+    .comment
+      - @comments.each do |comment|
+        .comment-box
+          .comment-name
+            = comment.user.name
+          .comment-text
+            = comment.text
 
     = link_to 'トップページに戻る', root_path, class: 'return__button'
 
 = render "button"
 
--# .message
--#   - @messages.each do |message|
-    -# = link_to message_path(message), class: 'message__box' do
--#       .message__box__title 
--#         =message.title
--#         %p.message__box__icon
--#           = message.user.name
-  -# = link_to message_add_path(message), method: :delete, remote: true, class: "like",id: :"like-button-#{message.id}" do
