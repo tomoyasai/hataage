@@ -101,6 +101,40 @@
   text-align: center;
 }
 
+.Form{
+ margin: 50px 0;
+ text-align: center;
+}
+
+.text-box{
+  width: 90%;
+  padding: 5px;
+}
+
+.send-box{
+  padding: 5px;
+  width: 9%;
+}
+
+.comment-box{
+  margin: 20px 0;
+  padding: 5px;
+  border: solid 1px black;
+  display: flex;
+}
+
+.comment-name{
+ font-weight: bold;
+ padding: 0 5px;
+ border-radius: 45%;
+ border: 1px solid gray;
+}
+
+.comment-text{
+  font-weight: bold;
+  padding-left:30px;
+ }
+
 .show-box__content__edit{
   height: 50px;
   margin: 30px auto;
