@@ -1,10 +1,6 @@
 .show
-  .show-title
-    %label 【投稿詳細ページ】
-
   .show-box
     .show-box__image
-      .show-box__image__file
       =image_tag @message.image.url, class: 'show-box__image__picture'
 
     .show-box__title
@@ -25,14 +21,6 @@
       .show__good__box
         %p いいね！
         = render partial: 'likes/like', locals: { message: @message,count: @count}
-       
-
-    .show-box__content
-      - if user_signed_in? && current_user.id == @message.user.id
-        = link_to '投稿を編集する', edit_message_path(@message.id), class:"show-box__content__edit"
-        = link_to '投稿を削除する', message_path(@message), method: :delete, class:"show-box__content__delete"
-      - else
-
 
     .container
       = form_with model: [@message, @comment], html: {class: "Form"}, local: true do |f|
@@ -47,6 +35,12 @@
             = comment.user.name
           .comment-text
             = comment.text
+             
+    - if user_signed_in? && current_user.id == @message.user.id
+      .show-box__content
+        = link_to '投稿を編集する', edit_message_path(@message.id), class:"show-box__content__edit"
+        = link_to '投稿を削除する', message_path(@message), method: :delete, class:"show-box__content__delete"
+
 
     = link_to 'トップページに戻る', root_path, class: 'return__button'
 
