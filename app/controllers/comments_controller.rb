@@ -1,11 +1,14 @@
 class CommentsController < ApplicationController
   def create
-    # comment = Comment.create(comment_params)
-    # redirect_to "/messages/#{comment.message.id}"
     @comment = Comment.create(comment_params)
-    respond_to do |format|
-      format.html { redirect_to message_path(params[:message_id])  }
-      format.json
+    if @comment.save
+      respond_to do |format|
+        format.html { redirect_to message_path(params[:message_id])  }
+        format.json
+      end
+    else
+      @messages = messages.includes(:user)
+      render :index
     end
   end
 
