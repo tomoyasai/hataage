@@ -23,10 +23,9 @@
         = render partial: 'likes/like', locals: { message: @message,count: @count}
 
     .container
-      = form_with model: [@message, @comment], html: {class: "Form"}, local: true do |f|
-        .Form__contents
-          = f.text_field :text, placeholder: "コメントする", rows: "2", class:'text-box'
-          = f.submit "SEND", class:'send-box'
+      = form_with model: [@message, @comment], html: {class: "Form"}, local: true, id: :"new_comment" do |f|
+        = f.text_field :text, placeholder: "コメントする", rows: "2", class:'text-box'
+        = f.submit "SEND", class:'send-box'
 
     .comment
       - @comments.each do |comment|
