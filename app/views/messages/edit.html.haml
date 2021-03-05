@@ -1,5 +1,5 @@
 .new-page
-  =form_with model: [@message], html: {class: "new-box"}, local: true do |f|
+  =form_with model: @message, html: {class: "new-box"}, local: true do |f|
     .new-box__title
       %label タイトル
       =f.text_field :title, class: "new-box__title__form", placeholder:"４０文字まで"
