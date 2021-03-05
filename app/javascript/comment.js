@@ -23,9 +23,16 @@ $(function(){
       contentType: false
     })
     .done(function(data){
+       if(data.text.length==0){
+        return false
+      }
       let html = buildHTML(data);
-      $('.comments').append(html);
+      $('.comment').append(html);
       $('.text-box').val('');
+      $('.send-box').prop('disabled', false);
+    })
+    .fail(function(){
+      alert('コメントが未入力です');
       $('.send-box').prop('disabled', false);
     })
   })
