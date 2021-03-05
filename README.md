@@ -49,7 +49,7 @@
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|comment|text|null: false|
+|text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |message_id|integer|null: false, foreign_key: true|
 ### Association
