@@ -12,13 +12,6 @@
           .left__box__search__form__send
             = f.submit '検索'
 
-  .center
-    .center__box  
-      .center__box__search
-        = text_field :keyword,class: 'center__box__search__name'
-        .center__box__search__send
-          タグ検索
-
   %ul.right-bottom
     - if user_signed_in?
       %li.right-bottom__button
