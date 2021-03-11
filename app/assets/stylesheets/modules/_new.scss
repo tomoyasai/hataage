@@ -78,23 +78,39 @@
 }
 
 .new-box__submit{
-  text-align: center;
+
 }
 
 .new-box__submit__btn{
-  font-size: 20px;
-  width: 20%;
+  height: 50px;
+  width: 40%;
+  margin: 30px auto;
+  background-color: rgb(0, 162, 255);
+  border: 1px solid rgb(0, 162, 255);
   color: white;
-  background-color: orange;
-  cursor: pointer;
+  border-radius: 4px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 48px;
+  display: block;
+  text-decoration: none;
 }
 
 .new-box__return{
-  padding-top: 50px;
-  text-align: center;
+
 }
 
 .new-box__return__btn{
-  color: rgb(0, 225, 255);
+  height: 50px;
+  width: 40%;
+  margin: 30px auto;
+  background-color: #33e3fa;
+  border: 1px solid #33e3fa;
+  color: white;
+  border-radius: 4px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 48px;
+  display: block;
   text-decoration: none;
 }
