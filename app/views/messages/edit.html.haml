@@ -10,12 +10,10 @@
 
     .new-box__image
       %label 投稿画像
-      %p.new-box__image__info １枚のみアップロードできます
       .new-box__image__file
         = f.label :image, class: 'new-box__image__file__upload' do
           = icon('fas', 'camera', class: 'new-box__image__file__upload__icon')
           = f.file_field :image, class: 'new-box__image__file__upload__file'
-          %p.new-box__image__file__upload__info クリックしてファイルをアップロード
 
     .new-box__content
       %label 記事の本文
