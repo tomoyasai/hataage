@@ -1,22 +1,26 @@
 .new-page{
   height: 100%;
   width: 100vw;
-  background-color: rgb(2, 179, 134);
+  background-color: rgb(236, 243, 234);
   padding: 20px;
 }
 
 .new-box{
   height: 100%;
-  width: 90%;
+  max-width: 55%;
   background-color: white;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
+
 }
 
 .new-box__title{
+ font-weight: bold;
  font-size: 20px;
- padding-bottom: 10px;
+ padding-bottom: 30px;
   &__form{
+    font-weight: normal;
+    height: 40px;
     width: 100%;
     font-size: 20px;
   }
@@ -25,59 +29,88 @@
 
 
 .new-box__category{
+  font-weight: bold;
   font-size: 20px;
-  padding-bottom: 10px;
-}
-.new-box__category__form{
-  width: 100%;
-  font-size: 20px;
+  padding-bottom: 30px;
+  &__form{
+    font-weight: normal;
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+  }  
 }
 
 
 
 .new-box__image{
-  // background-color: greenyellow;
-  padding-bottom: 10px;
-  border: 1px;
+  padding-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
 }    
 .new-box__image__file{
+  height: 120px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 .new-box__image__file__upload{
 
 }
-.fas.fa-camera{
 
+.new-box__image__file__upload__icon{
+  font-size: 25px;
+  cursor: pointer;
 }
-.new-box__image__file__upload__info{
 
+.new-box__image__file__upload__file{
+  display: none;
 }
 
 .new-box__content{
   font-size: 20px;
+  font-weight: bold;
 }
 .new-box__content__text{
   width: 100%;
+  font-weight: normal;
 }
 
 .new-box__submit{
-  text-align: center;
+
 }
 
 .new-box__submit__btn{
-  font-size: 20px;
-  width: 20%;
+  height: 50px;
+  width: 40%;
+  margin: 30px auto;
+  background-color: rgba(58, 214, 105, 0.993);
+  border: 1px solid rgba(58, 214, 105, 0.993);
   color: white;
-  background-color: orange;
-  cursor: pointer;
+  border-radius: 4px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 48px;
+  display: block;
+  text-decoration: none;
 }
 
 .new-box__return{
-  padding-top: 50px;
-  text-align: center;
+
 }
 
 .new-box__return__btn{
-  color: rgb(0, 225, 255);
+  height: 50px;
+  width: 40%;
+  margin: 30px auto;
+  background-color: #33e3fa;
+  border: 1px solid #33e3fa;
+  color: white;
+  border-radius: 4px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 48px;
+  display: block;
   text-decoration: none;
 }

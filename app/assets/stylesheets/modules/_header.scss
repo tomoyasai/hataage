@@ -17,47 +17,29 @@
   max-width: 1040px;
   width: 100%;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 10px 0;
   display: flex;
   justify-content: space-between;
-}
-
-.left{
-  border: 1px solid gray;
-
-}
-
-.left__box{
-
+  height: 60px;
 }
 
 .left__box__search{
   &__form{
-
+    display: flex;
     &__word{
-      width: 200px;
+      width: 230px;
+      padding: 5px;
     }
     &__send{
-      
-    }
-  }
-}
-
-
-.center{
-  border: 1px solid gray;
-  &__box{
-    &__search{
-      &__name{
-      }
-      &__send{
+      padding-left: 2px;
+      &__btn{
+        height: 100%;
       }
     }
   }
 }
 
 .right-bottom{
-  padding-top: 10px;
   display: flex;
   &__button{
     position: relative;
@@ -75,7 +57,6 @@
       text-decoration: none;
     }
     &__login{
-      padding: 2px;
       background-color: #2bbc7d;
       border: 1px solid #2bbc7d;
       border-radius: 20px;

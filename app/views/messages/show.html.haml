@@ -15,7 +15,7 @@
 
     .show-box__memo
       .show-box__memo__data
-        = @message.content
+        = safe_join(@message.content.split("\n"),tag(:br))
 
     .show__good
       .show__good__box
