@@ -1,7 +1,6 @@
 .top-header
   .header-box
     = link_to 'hataage', root_path, class: 'header-title'
-  
 
 .three-box
   .left
@@ -10,7 +9,7 @@
         =form_with url: search_messages_path, method: :get, class: 'left__box__search__form' ,local: true do |f|
           = f.text_field :keyword,class: 'left__box__search__form__word',placeholder: 'キーワードから探す'
           .left__box__search__form__send
-            = f.submit '検索'
+            = f.submit '検索' ,class: 'left__box__search__form__send__btn'
 
   %ul.right-bottom
     - if user_signed_in?

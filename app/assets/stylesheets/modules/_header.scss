@@ -23,26 +23,18 @@
   height: 60px;
 }
 
-.left{
-  // border: 1px solid gray;
-
-}
-
-.left__box{
-
-}
-
 .left__box__search{
   &__form{
     display: flex;
-
     &__word{
-      width: 250px;
+      width: 230px;
       padding: 5px;
-      
     }
     &__send{
-      padding: 5px;
+      padding-left: 2px;
+      &__btn{
+        height: 100%;
+      }
     }
   }
 }
