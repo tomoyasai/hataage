@@ -25,7 +25,7 @@
     .container
       = form_with(model: [@message, @comment], html: {class: "Form"}, local: true, id: "new_comment") do |f|
         = f.text_field :text, placeholder: "コメントする", rows: "2", class:'text-box'
-        = f.submit "SEND", class:'send-box'
+        = f.submit "送信", class:'send-box'
 
     .comment
       - @comments.each do |comment|
