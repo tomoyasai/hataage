@@ -1,6 +1,6 @@
 .AccountPage
   .AccountPage__title
-    %h2 Log in
+    %h2 ログイン
     %h5 登録しているユーザーでログイン
     = render "devise/shared/links"
   .AccountPage__form
@@ -17,4 +17,4 @@
           .FormField__input--normal
             = f.password_field :password, autocomplete: "off"
         .actions
-          = f.submit "Log in", class: 'Button UserButton'
+          = f.submit "ログイン", class: 'Button UserButton'
