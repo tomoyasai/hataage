@@ -22,8 +22,17 @@
   padding-bottom: 50px;
   display: flex;
   justify-content: right;
+  label{
+    width: 92px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 40px;
+    color: white;
+    font-size: 14px;
+    padding: 10px 16px;
+    font-weight: bold;
+  }
 }
-
 .show-box__title__data{
   margin-left: 50px;
   font-size: 30px;
@@ -34,6 +43,15 @@
   padding-bottom: 50px;
   display: flex;
   justify-content: right;
+  label{
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 40px;
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+    font-weight: bold;
+  }
 }
 
 
@@ -104,8 +122,17 @@
 }
 
 .send-box{
-  padding: 5px;
-  width: 9%;
+  padding-left: 5px;
+  width: 40px;
+  height: 38px;
+  border: none;
+  background-color: rgb(0, 162, 255);
+  border-radius: 35px;
+}
+
+.fas.fa-paper-plane{
+  font-size: 20px;
+  color: white;
 }
 
 .comment-box{
