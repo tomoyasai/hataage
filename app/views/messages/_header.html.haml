@@ -9,7 +9,9 @@
         =form_with url: search_messages_path, method: :get, class: 'left__box__search__form' ,local: true do |f|
           = f.text_field :keyword,class: 'left__box__search__form__word',placeholder: 'キーワードから探す'
           .left__box__search__form__send
-            = f.submit '検索' ,class: 'left__box__search__form__send__btn'
+            %button{type: "submit", class:'left__box__search__form__send__btn'}  
+              %i.fas.fa-search
+
 
   %ul.right-bottom
     - if user_signed_in?
