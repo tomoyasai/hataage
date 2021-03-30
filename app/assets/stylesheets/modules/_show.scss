@@ -122,8 +122,17 @@
 }
 
 .send-box{
-  padding: 5px;
-  width: 9%;
+  padding-left: 5px;
+  width: 40px;
+  height: 38px;
+  border: none;
+  background-color: rgb(0, 162, 255);
+  border-radius: 35px;
+}
+
+.fas.fa-paper-plane{
+  font-size: 20px;
+  color: white;
 }
 
 .comment-box{
