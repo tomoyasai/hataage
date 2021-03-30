@@ -32,13 +32,19 @@
     }
     &__send{
       padding-left: 2px;
-      &__btn{
+      &__btn{    
+        background-color: #33d38e;
+        color: white;
         height: 100%;
-        width: 40px;
-        font-size: 15px;
+        width: 35px;
+        border: none;
       }
     }
   }
+}
+.fas.fa-search{
+  font-size: 17px;
+  color: white;
 }
 
 .right-bottom{
