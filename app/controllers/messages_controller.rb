@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit]
   before_action :find_message, only: [:show, :edit, :update, :check_user]
   before_action :check_user, only: [:edit, :update]
 
